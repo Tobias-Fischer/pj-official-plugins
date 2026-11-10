@@ -10,6 +10,9 @@ below; for earlier releases see the git history of `data_stream_ros2/`.
 - macOS: the proxy detects a RoboStack environment (the executable's environment
   holding `librclcpp.dylib`) and loads its payload; `robostack/build.sh` builds
   macos-arm64 payloads. The marketplace zip is still Linux-only.
+- In a RoboStack environment that ships this extension
+  (`<env>/lib/plotjuggler/plugins/ros2-topic-subscriber/`), the payload is loaded
+  from there rather than from the per-user copy, which several environments share.
 
 ### Fixed
 - lyrical: the subscriber builds against rclcpp 32, which deprecates the
